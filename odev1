@@ -1,0 +1,254 @@
+1.soru:
+
+öğrenci ID       AD SOYAD                Telefon
+ ---------------------------------------------------------
+ 24301071069      Koray bayrak            0551 158 49 25
+ ---------------------------------------------------------
+ 26732461398      ali yılmaz              0536 784 15 29
+ ---------------------------------------------------------
+ 28125964379      mehmet kılıç            0542 628 78 63
+ --------------------------------------------------------- 
+
+Öğrenci ID : Birincil anahtar 
+
+ ders kodu     Ders adı       ders kredisi   
+ ------------------------------------------------- 
+    01         matematik           5
+ -------------------------------------------------    
+    06        algotirma            5
+ -------------------------------------------------    
+    08        iş sağlığı           2
+ -------------------------------------------------   
+
+Ders kodu: primary key (birincil anahtar)
+
+ ders kodu    öğrenci ID       aldığı not
+ ------------------------------------------------   
+   01         24301071069         70
+ ------------------------------------------------
+   06         26732461398         45
+ ------------------------------------------------
+   08         28125964379         55
+ ------------------------------------------------
+
+Ders kodu: foreign key(yabancıl anahtar) 2.tabloya  bağlı
+Öğrenci ID: foreign key(yabanacıl anahtar) 1.tabloya bağlı
+
+2.soru : Geleneksel Dosyalama Sistemleri ve Veri Tabanı Yönetim Sistemleri (VTYS) Arasındaki Benzerlikler ve Farklar
+         
+       Benzerlikler:
+1- İkisi de veriyi saklamak için kullanılır
+2- Dosya temelli çalışırlar yani veri fiziksel olarak bir dosyada tutulur
+3- Veri erişiminde belirli yöntemler kullanılır
+
+Farklar:
+1- Geleneksel sistemlerde veri düz dosyalarda saklanırken VTYS tablo yapısını kullanır.
+2- VTYS verinin tutarlılığını ve bütünlüğünü sağlar geleneksel sistemlerde bu elle yapılır
+3- VTYS güvenlik ve yetkilendirme sunar ama geleneksel sistemlerde böyle bi şey yoktur.
+4- Çoklu kullanıcı desteği VTYS de var ama geleneksel sistemlerde aynı anda çalışmak sıkıntılıdır.
+5- VTYS hızlıdır çünkü indeksleme ve sorgulama yapar geleneksel sistemler direkt dosyayı taramak zorunda kalır.
+6- Geleneksel sistemlerde veri güncellemek uğraştırır ama VTYS de SQL gibi dillerle kolayca güncellenir.
+
+
+3.soru : VTYS nin geleneksel sisteme göre üstün ozellikleri
+       
+1.Veri Bağımsızlığı: Uygulama ve veritabanı yapısı birbirinden bağımsızdır değişiklikler uygulama kodlarını etkilemez.
+
+2.Veri Güvenliği: Kullanıcı erişim düzeyleri belirlenebilir veri güvenliği sağlanır.
+
+3.Veri Tutarlılığı: Verilerin tutarlılığı ve bütünlüğü korunur.
+
+4.Yedekleme ve Kurtarma: Düzenli yedekleme yapılabilir veri kaybı durumunda hızlı kurtarma yapılır.
+
+5.Veri Paylaşımı: Çoklu kullanıcıların eşzamanlı veri erişimi güvenli bir şekilde yapılabilir.
+
+6.Veri Manipülasyonu ve Sorgulama: SQL gibi dillerle veri işlemleri kolaylaşır.
+
+7.Depolama Verimliliği: Veri sıkıştırma ve indeksleme ile verimli depolama yapılabilir.  
+
+
+
+4. soru : veri tabanının görevi ve kullanıldğı alanlar
+
+Veritabanının görevi, verileri depolamak, düzenlemek ve hızlı erişim sağlamaktır. Verilerin güvenliğini, bütünlüğünü ve tutarlılığını koruyarak yönetilmesini kolaylaştırır.
+      
+
+Kullanıldığı alanlar:
+
+
+1.E-ticaret Siteleri: Ürün bilgileri kullanıcı hesapları ve siparişler gibi verilerin depolanması ve yönetilmesi için kullanılır.
+
+2.Sağlık Sektörü: Hastaların tıbbi geçmişi tedavi süreçleri ve ilaç bilgileri gibi veriler veritabanlarında tutulur.
+
+3.Bankacılık: Müşteri hesap bilgileri işlem geçmişi ve kredi kartı verileri veritabanlarında güvenli bir şekilde depolanır.
+
+4.Eğitim: Öğrencilerin sınav sonuçları ders notları ve kayıt bilgileri gibi veriler veritabanlarında saklanır.
+
+5.Telekomünikasyon: Telefon görüşmeleri  mesajlaşma verileri ve müşteri bilgileri veritabanlarında saklanarak analiz yapılır.
+
+
+
+
+5.soru : tablo satır ve sütun kavramları
+
+
+Tablo: Verilerin düzenli olarak saklandığı yapıdır. Örneğin  "Müşteriler" tablosu  tüm müşteri bilgilerini içerir.
+
+Satır: Tabloya eklenen her kayıt bir satırdır  Her satır bir varlıkla ilgili tüm bilgileri taşır, örneğin bir müşteri kaydı.
+
+Sütun: Tabloyu oluşturan her özellik veya alan bir sütundur. Örneğin  Ad, Soyad, Telefon  gibi sütunlar  her satırdaki veriyi tanımlar.
+
+
+
+
+
+6.soru : birincil anahtar ve yabancıl anahtar kavramlarını ve farklılıkları 
+
+Birincil Anahtar: Her kaydın benzersiz olarak tanımlandığı sütundur, her değeri farklı olmalıdır.
+
+Yabancı Anahtar: Bir tablodaki sütunun, başka bir tablodaki birincil anahtara referans verdiği sütundur.
+
+farkları
+
+Birincil anahtar bir tablodaki her kaydın benzersiz olmasını sağlar.
+Yabancı anahtar bir tablodaki verilerin başka bir tablodaki verilerle ilişkisini kurar.
+Birincil anahtar yalnızca bir tabloda bulunur ancak yabancı anahtar başka bir tablodaki birincil anahtara bağlanabilir.
+
+
+
+7.soru : Veritabanı kullanıcı türleri
+
+
+1.Veritabanı Yöneticisi (DBA): Veritabanını yönetir bakımını yapar güvenliği sağlar ve kullanıcı haklarını belirler.
+
+2.Uygulama Geliştiricisi: Veritabanını kullanarak uygulamalar geliştirir ve veriyi işler.
+
+3.Son Kullanıcı: Veritabanına erişen ve verileri sorgulayan kişilerdir genellikle uygulama üzerinden veri kullanırlar.
+
+4.Sistem Kullanıcıları: Veritabanını sistem yönetimi için kullanan ve veri üzerinde otomatik işlemler yapan kullanıcı türüdür.
+
+
+
+
+8.soru :
+
+
+Kullanıcı ID (PK)	Kullanıcı Adı	              Şifre	                           Rol ID (FK)
+1	                  Ahmet	                      123456	                                2
+2	                  Mehmet	              654321	                                1
+3	                  Ayşe	                      987654	                                3 
+
+
+
+
+
+
+
+
+
+
+
+2. Roller Tablosu
+Rol ID (PK)	                         Rol Adı
+1	                                 Yönetici
+2	                                 Editör
+3	                                 Görüntüleyici
+
+
+
+
+
+
+
+
+
+3. Yetkiler Tablosu
+Yetki ID (PK)	                                  Yetki Adı
+1	                                          Kullanıcıları Yönetme
+2	                                          İçerik Düzenleme
+3	                                          İçeriği Görüntüleme
+4.                                                Rol ve Yetkiler Tablosu
+
+
+
+
+4. Rol ve yetkililer tablosu
+Rol ID (FK)	                                  Yetki ID (FK)
+1	                                                1
+1	                                                2
+1	                                                3
+2	                                                4
+2	                                                5
+3	                                                6
+
+
+
+
+
+
+
+
+
+
+9.soru : veritabanı ile VTYS nin farkı
+
+Veritabanı: Verilerin düzenli bir şekilde saklandığı yapıdır. İçerisinde tablolar satırlar ve sütunlar bulunur. Veritabanı sadece verilerin depolandığı bir alan olarak düşünülebilir.
+
+VTYS: Veritabanlarının oluşturulmasını yönetilmesini ve kullanılmasını sağlayan yazılımdır. VTYS verilerin düzenlenmesi erişilmesi güvenliği ve yedeklenmesi gibi işlemleri yönetir.
+
+Farkları
+
+Veritabanı sadece verilerin depolandığı alandır VTYS ise veritabanlarını yöneten yazılımdır.
+VTYS, veritabanları üzerinde işlemler yapmak için araçlar ve fonksiyonlar sunar.
+Veritabanı VTYS'siz de var olabilir ama VTYS olmadan veritabanı üzerinde etkin bir şekilde işlem yapmak zordur.
+
+
+
+
+
+
+10. soru : ilişkisel veri modeli
+
+ilişkisel Veri Modeli verilerin tablolarda satır ve sütunlar şeklinde düzenlendiği bir modeldir. Bu modelde veriler arasındaki ilişkiler anahtarlar kullanılarak kurulur.
+
+
+Ana özellikleri:
+
+
+ablolar : Veriler her biri belirli bir konuyu temsil eden tablolarda saklanır. Her tablo belirli sütunlara  ve her sütundaki verilere karşılık gelen satırlara  sahiptir.
+
+Birincil Anahtar: Her tablonun birincil anahtarı her satırın benzersiz şekilde tanımlanmasını sağlar.
+
+Yabancı Anahtar: Bir tablodaki sütunun başka bir tablodaki birincil anahtara referans verdiği kavramdır. Bu tablolardaki veriler arasındaki ilişkiyi kurar.
+
+Veri Bütünlüğü: İlişkisel model verilerin tutarlılığını ve doğruluğunu sağlamak için kısıtlamalar  kullanır örneğin birincil anahtar ve yabancı anahtar kısıtlamaları.
+
+
+Bu model verilerin düzenli bir şekilde saklanmasını ve yönetilmesini sağlayarak veritabanlarındaki verilerin daha verimli ve güvenli bir şekilde işlenmesine olanak tanır.
+
+
+
+
+
+
+11.soru : bir öğrenci bilgi sistemi için  kullanılacak veritabanı  tablolar ve tablolar arasındaki ilişkiler
+
+
+1.Öğrenciler: Burada öğrencilerin kişisel bilgileri tutulur. Örneğin öğrenci numarası adı soyadı doğum tarihi gibi bilgileri içerir.
+
+2.Dersler: Sunulan derslerle ilgili bilgiler bu tabloda yer alır. Ders adı kredi öğretim görevlisi gibi bilgiler bulunur.
+
+3.Kayıtlar: Öğrencilerin hangi derslere kayıt oldukları bilgisi burada saklanır. Yani hangi öğrenci hangi derse kaydolmuş hangi yıl ve dönemde ders alınmış gibi veriler yer alır.
+
+4.Notlar: Öğrencilerin aldıkları derslerdeki notlar burada tutulur. Hangi öğrenci hangi dersten ne not almış gibi bilgiler bulunur.
+
+
+Tablolar Arasındaki İlişkiler:
+
+Öğrenciler ve Kayıtlar arasında 1-N ilişkisi vardır. Bir öğrenci birden fazla derse kayıt olabilir.
+
+Dersler ve Kayıtlar arasında 1-N ilişkisi bulunur. Bir dersin birden fazla öğrencisi olabilir.
+
+Öğrenciler ve Notlar arasında 1-N ilişkisi vardır. Bir öğrenci, birden fazla dersten not alabilir.
+
+Dersler ve Notlar arasında da 1-N ilişkisi vardır. Bir dersin birçok öğrencisi olabilir ve her öğrencinin notu farklıdır.
