@@ -1,0 +1,77 @@
+create database dbkutuphane
+use dbkutuphane
+
+CREATE TABLE Adresler (
+AdresNo INT PRIMARY KEY,
+Sehir VARCHAR(255),
+Mahalle VARCHAR(255),
+BinaNo INT,
+PostaKodu VARCHAR(10),
+Ulke VARCHAR(100),
+Cadde VARCHAR(255)
+)
+CREATE TABLE Uyeler (
+UyeNo INT PRIMARY KEY,
+UyeAdi VARCHAR(50),
+UyeSoyadi VARCHAR(50),
+Telefon VARCHAR(15),
+Eposta VARCHAR(100),
+Cinsiyet CHAR(1),
+AdresNo INT,
+FOREIGN KEY (AdresNo) REFERENCES Adresler(AdresNo)
+)
+CREATE TABLE Kutuphane (
+KutuphaneNo INT PRIMARY KEY,
+KutuphaneIsmi VARCHAR(100),
+Aciklama TEXT,
+AdresNo INT,
+FOREIGN KEY (AdresNo) REFERENCES Adresler(AdresNo)
+)
+CREATE TABLE Kitaplar (
+ISBN VARCHAR(20) PRIMARY KEY,
+KitapAdi VARCHAR(255),
+Yazar VARCHAR(255),
+Yayinevi VARCHAR(255),
+BasimYili INT,
+SayfaSayisi INT
+)
+CREATE TABLE Kategoriler (
+KategoriID INT PRIMARY KEY,
+KategoriAdi VARCHAR(100)
+)
+CREATE TABLE Yazarlar (
+YazarID INT PRIMARY KEY,
+YazarAdi VARCHAR(100),
+DogumTarihi DATE,
+DogumYeri VARCHAR(100)
+)
+CREATE TABLE Emanet (
+EmanetNo INT PRIMARY KEY,
+EmanetTarihi DATE,
+TeslimTarihi DATE,
+UyeNo INT,
+FOREIGN KEY (UyeNo) REFERENCES Uyeler(UyeNo),
+KutuphaneNo INT,
+FOREIGN KEY (KutuphaneNo) REFERENCES Kutuphane(KutuphaneNo),
+ISBN VARCHAR(20),
+FOREIGN KEY (ISBN) REFERENCES Kitaplar(ISBN)
+)
+/*
+Alter table kitaplar
+Add kategoriler char
+Constraint FK_kitaplar_ISBN   /*kitaplar tablosu olmadığı için hata veriyor */
+Foreign key (ISBN)
+References (Kategoriler)ISBN
+
+Alter table yazarlar 
+Add yazarlar chat
+Constraint FK_kitaplar_yazarno/*yazarlar tablosu olmadığı için hata veriyor */
+Foreign key (yazarno)
+References yazarlar(yazarno)
+uyeNo int CONSTRAINT FK_uyeler_emanet
+FOREIGN KEY (uyeNo) REFERENCES uyeler(uyeNo)
+kutuphaneNo int CONSTRAINT FK_kutuphane_emanet
+FOREIGN KEY (kutuphaneNo) REFERENCES kutuphane(kutuphaneNo) /*tüm tablolar oluşturulmalı  */
+ISBN nvarchar(20) CONSTRAINT FK_kitap_emanet
+FOREIGN KEY(ISBN) REFERENCES KITAPLAR(ISBN)
+)
